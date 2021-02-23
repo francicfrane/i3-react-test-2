@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "App.scss",
+        "komponente/navbar/Navbar.scss"
+    ],
+    "names": [],
+    "file": "App.css"
+}
