@@ -1,18 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,200&display=swap');
 
-//varijable za boje
-$green:rgb(0, 179, 83);
-$green-hover:rgb(0, 155, 72);
-$text:rgb(226, 226, 226);
-$bg:rgba(31, 31, 31, 0.60);
-
-//global
-*{
-    margin: 0;
-    padding: 0;
-    border-style: none;
-    font-family: 'poppins',sans-serif;
-}
 
 //mobitel  ------ mobile 1st dizajn \\
 @media all and (min-width:375px){
@@ -21,11 +7,13 @@ $bg:rgba(31, 31, 31, 0.60);
             list-style: none;
             display: flex;
             flex-direction: column;
+            background-color: $bg;
 
             li{
                 position: relative;
                 width: 100%;
                 text-align: center;
+
 
                 .dropdown {
                     position: absolute;
@@ -47,6 +35,7 @@ $bg:rgba(31, 31, 31, 0.60);
                 display: block;
                 transform-origin:top center ;
                 opacity: 0;
+                
 
                 &:nth-child(1){
                     animation: animate 300ms ease-in-out forwards;
@@ -67,7 +56,6 @@ $bg:rgba(31, 31, 31, 0.60);
                     align-items: center;
                     justify-content: center;
                     color: $text;
-                    background-color:$bg ;
                     height: 50px;
                     text-decoration: none;
                     transition: all 0.2s ease-in-out;
@@ -83,14 +71,11 @@ $bg:rgba(31, 31, 31, 0.60);
     @keyframes animate {
         0%{
             opacity: 0;
-            transform: rotateX(-90deg);
         }
         50%{
-            transform: rotateX(20deg);
         }
         100%{
             opacity: 1;
-            transform: rotateX(0deg);
         }
     }
 }
@@ -98,7 +83,7 @@ $bg:rgba(31, 31, 31, 0.60);
 @media all and (min-width:550px) {
 
     .menu-area {
-        margin-top: 20px;
+        margin-top: 10px;
         ul{
             flex-direction: row;
             margin: 0 auto;
