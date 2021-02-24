@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,200&display=swap');
+
+//varijable za boje
+$green:rgb(0, 179, 83);
+$green-hover:rgba(199, 202, 0, 0.438);
+$text:rgb(226, 226, 226);
+$bg:rgba(216, 216, 216, 0.075);
+
+//global
+*{
+    margin: 0;
+    padding: 0;
+    border-style: none;
+    font-family: 'poppins',sans-serif;
+    
+}
+
+body{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

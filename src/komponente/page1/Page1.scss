@@ -1,0 +1,82 @@
+@import '../global/global.scss';
+
+.item{
+  color: white;
+  border-radius: 50%;
+  background-color:$bg;
+  width: 130px;
+  height: 130px;
+  
+  p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+}
+
+
+.container {
+  width: 80%;
+  margin:20px auto;
+}
+.carousel {
+  
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  
+ 
+}
+.slider {
+  display: flex;
+  height: 100%;
+  width: 300%;
+}
+.slider section {
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  transition: 0.3s ease-in-out;
+}
+.left, .right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.arrow i {
+  font-size: 70px;
+  color: $green-hover;
+}
+.left {
+  left: 10px;
+}
+.right {
+  right: 10px;
+}
+.control ul {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%);
+}
+.control ul li {
+  width: 12px;
+  height: 12px;
+  background: $bg;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  margin: 10px;
+  cursor: pointer;
+}
+.control ul li.selected {
+  background: $green-hover;
+}
