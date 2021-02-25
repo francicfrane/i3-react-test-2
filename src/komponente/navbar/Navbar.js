@@ -4,15 +4,15 @@ function Navbar() {
     return (
         <nav className='menu-area'>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/">Page 1</a></li>
-                <li><a href="/" className='logo'>Logo</a></li>
-                <li><a href="/">Page2</a></li>
-                <li><a  href="/">Dropdown ▾</a>
+                <li><div>Home</div></li>
+                <li><div>Page 1</div></li>
+                <li><div className='logo'>Logo</div></li>
+                <li><div>Page2</div></li>
+                <li><div>Dropdown ▾</div>
                     <ul className='dropdown'>
-                        <li><a href="/">prvi</a></li>
-                        <li><a href="/">drugi</a></li>
-                        <li><a href="/">treci</a></li>
+                        <li><div>prvi</div></li>
+                        <li><div>drugi</div></li>
+                        <li><div>treci</div></li>
                     </ul>
                 </li>
             </ul>

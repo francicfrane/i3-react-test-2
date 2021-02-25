@@ -4,35 +4,49 @@
   color: white;
   border-radius: 50%;
   background-color:$bg;
-  width: 130px;
-  height: 130px;
-  
-  p{
+  width: 160px;
+  height: 160px;
+  position: relative;
+  margin: 0 auto;
+
+  h6{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-weight: 500;
   }
-  
+}
+
+.opis-itema{
+  color: $text;
+  text-align: center;
+  margin-top: 20px;
 }
 
 
 .container {
+  margin-top: 150px;
+  position: absolute;
   width: 80%;
-  margin:20px auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
 }
 .carousel {
   
   height: 400px;
   overflow: hidden;
   position: relative;
-  
- 
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0);
 }
 .slider {
   display: flex;
   height: 100%;
-  width: 300%;
+  width: 400%;
 }
 .slider section {
   flex-basis: 100%;
@@ -40,7 +54,6 @@
   align-items: center;
   display: flex;
   font-size: 20px;
-  transition: 0.3s ease-in-out;
 }
 .left, .right {
   position: absolute;
@@ -51,6 +64,8 @@
 .arrow i {
   font-size: 70px;
   color: $green-hover;
+  &:hover{ color:$green }
+  
 }
 .left {
   left: 10px;
@@ -69,14 +84,14 @@
   transform: translate(-50%);
 }
 .control ul li {
-  width: 12px;
-  height: 12px;
-  background: $bg;
-  border: 1px solid #fff;
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border: 2px solid #333;
   border-radius: 50px;
   margin: 10px;
   cursor: pointer;
 }
 .control ul li.selected {
-  background: $green-hover;
+  background: transparent;
 }

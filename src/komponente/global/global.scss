@@ -2,7 +2,7 @@
 
 //varijable za boje
 $green:rgb(0, 179, 83);
-$green-hover:rgba(199, 202, 0, 0.438);
+$green-hover:rgba(0, 179, 84, 0.623);
 $text:rgb(226, 226, 226);
 $bg:rgba(216, 216, 216, 0.075);
 
@@ -16,8 +16,9 @@ $bg:rgba(216, 216, 216, 0.075);
 }
 
 body{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./bg.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.157), rgba(0, 0, 0, 0.164)), url(./bg2.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    overflow-x: hidden;
 }

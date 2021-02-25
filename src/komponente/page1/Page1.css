@@ -7,38 +7,56 @@
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(./bg.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./bg.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.157)), to(rgba(0, 0, 0, 0.164))), url(./bg2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.157), rgba(0, 0, 0, 0.164)), url(./bg2.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .item {
   color: white;
   border-radius: 50%;
   background-color: rgba(216, 216, 216, 0.075);
-  width: 130px;
-  height: 130px;
+  width: 160px;
+  height: 160px;
+  position: relative;
+  margin: 0 auto;
 }
 
-.item p {
+.item h6 {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.opis-itema {
+  color: #e2e2e2;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container {
+  margin-top: 150px;
+  position: absolute;
+  width: 80%;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.container {
-  width: 80%;
-  margin: 20px auto;
-}
-
 .carousel {
   height: 400px;
   overflow: hidden;
   position: relative;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0);
 }
 
 .slider {
@@ -46,7 +64,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  width: 300%;
+  width: 400%;
 }
 
 .slider section {
@@ -62,8 +80,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-size: 20px;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
 }
 
 .left, .right {
@@ -76,7 +92,11 @@ body {
 
 .arrow i {
   font-size: 70px;
-  color: rgba(199, 202, 0, 0.438);
+  color: rgba(0, 179, 84, 0.623);
+}
+
+.arrow i:hover {
+  color: #00b353;
 }
 
 .left {
@@ -102,16 +122,16 @@ body {
 }
 
 .control ul li {
-  width: 12px;
-  height: 12px;
-  background: rgba(216, 216, 216, 0.075);
-  border: 1px solid #fff;
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border: 2px solid #333;
   border-radius: 50px;
   margin: 10px;
   cursor: pointer;
 }
 
 .control ul li.selected {
-  background: rgba(199, 202, 0, 0.438);
+  background: transparent;
 }
 /*# sourceMappingURL=Page1.css.map */

@@ -6,20 +6,38 @@ function Page1() {
             <div className="carousel">
                 <div className="slider">
                    <section>
-                       <div className="item item1">
-                        <p>+6%</p>
-                       </div>
-                   </section>
-                   <section>
-                        <div className="item item2">
-                           
+                        <div>
+                            <div className="item">
+                                <h6>8.848m</h6>
+                            </div>
+                                <p className='opis-itema'>Mt. Everest</p>
                         </div>
                    </section>
                    <section>
-                       <div className="item item3">
-                           
-                       </div>
+                        <div>
+                            <div className="item">
+                                <h6>8.611m</h6>
+                            </div>
+                                <p className='opis-itema'>K2</p>
+                        </div>
                    </section>
+                   <section>
+                        <div>
+                            <div className="item">
+                                <h6>8.536m</h6>
+                            </div>
+                                <p className='opis-itema'>Kanchenjunga I</p>
+                        </div>
+                   </section>
+                   <section>
+                        <div>
+                            <div className="item">
+                                <h6>8.511m</h6>
+                            </div>
+                                <p className='opis-itema'>Lhotse I</p>
+                        </div>
+                   </section>
+                  
                 </div>
                 <div className="control">
                     <span className="arrow left">
@@ -34,6 +52,7 @@ function Page1() {
                     </span>
                     <ul>
                         <li className="selected"></li>
+                        <li></li>
                         <li></li>
                         <li></li>
                     </ul>

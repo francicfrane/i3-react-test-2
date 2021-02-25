@@ -6,8 +6,18 @@
   font-family: 'poppins',sans-serif;
 }
 
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.157)), to(rgba(0, 0, 0, 0.164))), url(./bg2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.157), rgba(0, 0, 0, 0.164)), url(./bg2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
 @media all and (min-width: 375px) {
   .menu-area ul {
+    cursor: pointer;
     list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -20,10 +30,9 @@
   .menu-area ul li {
     position: relative;
     width: 100%;
-    text-align: center;
   }
   .menu-area ul li .dropdown {
-    position: absolute;
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -34,39 +43,33 @@
     width: 100%;
   }
   .menu-area ul li .dropdown li {
-    display: none;
     position: relative;
-  }
-  .menu-area ul li:hover > .dropdown {
-    -webkit-perspective: 1000px;
-            perspective: 1000px;
+    display: none;
   }
   .menu-area ul li:hover > .dropdown li {
+    opacity: 0;
     top: 0;
     display: block;
-    -webkit-transform-origin: top center;
-            transform-origin: top center;
-    opacity: 0;
   }
-  .menu-area ul li:hover > .dropdown li:nth-child(1) {
+  .menu-area ul li:nth-child(1) {
     -webkit-animation: animate 300ms ease-in-out forwards;
             animation: animate 300ms ease-in-out forwards;
-    -webkit-animation-delay: -150ms;
-            animation-delay: -150ms;
+    -webkit-animation-delay: -250ms;
+            animation-delay: -250ms;
   }
-  .menu-area ul li:hover > .dropdown li:nth-child(2) {
+  .menu-area ul li:nth-child(2) {
     -webkit-animation: animate 300ms ease-in-out forwards;
             animation: animate 300ms ease-in-out forwards;
     -webkit-animation-delay: -0ms;
             animation-delay: -0ms;
   }
-  .menu-area ul li:hover > .dropdown li:nth-child(3) {
+  .menu-area ul li:nth-child(3) {
     -webkit-animation: animate 300ms ease-in-out forwards;
             animation: animate 300ms ease-in-out forwards;
-    -webkit-animation-delay: 150ms;
-            animation-delay: 150ms;
+    -webkit-animation-delay: 250ms;
+            animation-delay: 250ms;
   }
-  .menu-area ul li a {
+  .menu-area ul li div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -77,52 +80,40 @@
         -ms-flex-pack: center;
             justify-content: center;
     color: #e2e2e2;
-    background-color: rgba(31, 31, 31, 0.6);
     height: 50px;
     text-decoration: none;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
   }
-  .menu-area ul li a:hover {
-    background: #009b48;
+  .menu-area ul li div:hover {
+    background: rgba(199, 202, 0, 0.438);
   }
   @-webkit-keyframes animate {
     0% {
       opacity: 0;
-      -webkit-transform: rotateX(-90deg);
-              transform: rotateX(-90deg);
     }
     50% {
-      -webkit-transform: rotateX(20deg);
-              transform: rotateX(20deg);
     }
     100% {
       opacity: 1;
-      -webkit-transform: rotateX(0deg);
-              transform: rotateX(0deg);
     }
   }
   @keyframes animate {
     0% {
       opacity: 0;
-      -webkit-transform: rotateX(-90deg);
-              transform: rotateX(-90deg);
     }
     50% {
-      -webkit-transform: rotateX(20deg);
-              transform: rotateX(20deg);
     }
     100% {
       opacity: 1;
-      -webkit-transform: rotateX(0deg);
-              transform: rotateX(0deg);
     }
   }
 }
 
 @media all and (min-width: 550px) {
   .menu-area {
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .menu-area ul {
     -webkit-box-orient: horizontal;
@@ -132,9 +123,8 @@
     margin: 0 auto;
   }
   .menu-area ul li a {
-    border-radius: 1px;
-    margin: 0 5px;
-    height: 40px;
+    border: 1px solid white;
+    position: absolute;
   }
   .menu-area ul .dropdown li {
     margin-top: 5px;
