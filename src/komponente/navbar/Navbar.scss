@@ -4,34 +4,40 @@
 @media all and (min-width:375px){
     .menu-area {
         ul{
-            cursor: pointer;
+            cursor: pointer; //
             list-style: none;
-            display: flex;
-            flex-direction: column;
+            display: flex;//
+            flex-direction: column;//
             //background-color: $bg;
 
             li{
-                position: relative;
-                width: 100%;
+                position: relative;//
+                width: 100%;//
+                &:hover .dropdown  li{
+                    opacity: 0;
+                    top: 0;//
+                    display: block;//
+                    }
 
                 .dropdown {
-                    position: relative;
-                    display: flex;
-                    flex-direction: column;
-                    width: 100%;
-                    
+                    display: flex;//
+                    flex-direction: column;//
+                    position: absolute;//
+                    width: 100%;//
                     
                     li{
-                        position: relative;
-                        display: none;
+                        position:relative;//
+                        display: none;//
+                        
                     }
+                    
                 }
                 
-                &:hover > .dropdown  li{
-                opacity: 0;
-                top: 0;
-                display: block;
-                }
+                :hover:active .dropdown > li{
+                    opacity: 0;
+                    top: 0;//
+                    display: block;//
+                    }              
                 
 
                 &:nth-child(1){
@@ -48,7 +54,7 @@
                 }
                 
 
-                div{
+                .link{
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -57,9 +63,10 @@
                     text-decoration: none;
                     transition: all 0.2s ease-in-out;
                     cursor: pointer;
+                    position: relative;
 
                 &:hover{
-                    background: $green-hover;
+                    background: $green-hover; //
                     }
                 }
             }
@@ -112,7 +119,7 @@
         ul{
             max-width: 1440px;
             
-            li a{
+            li .link{
                 height: 70px;
             }
         }
@@ -124,7 +131,7 @@
         ul{
             max-width: 2380px;
             
-            li a{
+            li .link{
                 height: 180px;
             }
         }

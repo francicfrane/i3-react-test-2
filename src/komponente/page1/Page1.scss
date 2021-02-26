@@ -1,97 +1,187 @@
 @import '../global/global.scss';
 
-.item{
-  color: white;
-  border-radius: 50%;
-  background-color:$bg;
-  width: 160px;
-  height: 160px;
-  position: relative;
-  margin: 0 auto;
-
-  h6{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 28px;
-    font-weight: 500;
-  }
+.item1 {
+  background-image: url(./items_img/item1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.item2 {
+  background-image: url(./items_img/item2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.item3 {
+  background-image: url(./items_img/item3.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.item4 {
+  background-image: url(./items_img/item4.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
-.opis-itema{
-  color: $text;
-  text-align: center;
-  margin-top: 20px;
-}
-
-
-.container {
-  margin-top: 150px;
+h6{
   position: absolute;
-  width: 80%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
-}
-.carousel {
-  
-  height: 400px;
-  overflow: hidden;
-  position: relative;
+  font-size: 28px;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.349);
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0);
+  color: $text;
+  line-height: 25px;
 }
-.slider {
-  display: flex;
-  height: 100%;
-  width: 400%;
-}
-.slider section {
-  flex-basis: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  font-size: 20px;
-}
-.left, .right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-.arrow i {
-  font-size: 70px;
-  color: $green-hover;
-  &:hover{ color:$green }
+
+// mobitel
+@media all and (max-width:549px){
+  .item{
+    color: white;
+    border-radius: 50%;
+    background-color:$bg;
+    width: 160px;
+    height: 160px;
+    position: relative;
+    margin: 0 auto;
   
+    
+  }
+  
+  .opis-itema{
+    color: $text;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  
+  .container {
+    margin-top: 200px;
+    position: fixed;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .carousel {
+    
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0);
+  }
+  .slider {
+    display: flex;
+    height: 100%;
+    width: 400%;
+  }
+  .slider section {
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+  }
+  .left, .right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .arrow i {
+    user-select: none;
+    font-size: 70px;
+    color: $green-hover;
+    &:hover{ color:$green }
+    
+  }
+  .left {
+    left: 10px;
+  }
+  .right {
+    right: 10px;
+  }
+  .control ul {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%);
+  }
+  .control ul li {
+    width: 10px;
+    height: 10px;
+    background: #333;
+    border: 1px solid #333;
+    border-radius: 50px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .control ul li.selected {
+    background: $green-hover;
+  }
 }
-.left {
-  left: 10px;
+
+
+@media all and (min-width:550px) {
+
+
+
+  .arrow, .selected { display: none;}
+
+  .slider{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .item{
+    color: white;
+    border-radius: 50%;
+    background-color:$bg;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    margin: 0 10px;
+    h6{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 28px;
+      font-weight: 500;
+    }
+  }
+  
+  .opis-itema{
+    color: $text;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 120%;
+  }
 }
-.right {
-  right: 10px;
+@media all and (min-width:786px){
+  .item{ margin: 0 15px;}
 }
-.control ul {
-  list-style: none;
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin: 0;
-  padding: 0;
-  transform: translate(-50%);
+
+@media all and (min-width:992px){
+  .item{ margin: 0 25px;}
 }
-.control ul li {
-  width: 10px;
-  height: 10px;
-  background: #333;
-  border: 2px solid #333;
-  border-radius: 50px;
-  margin: 10px;
-  cursor: pointer;
-}
-.control ul li.selected {
-  background: transparent;
+@media all and (min-width:1980px){
+
+  .item{
+    width: 200px;
+    height: 200px;
+    margin: 0 45px;
+  }
+
+  .opis-itema{ font-size: 30px;}
 }

@@ -7,7 +7,7 @@ function Page1() {
                 <div className="slider">
                    <section>
                         <div>
-                            <div className="item">
+                            <div className="item item1">
                                 <h6>8.848m</h6>
                             </div>
                                 <p className='opis-itema'>Mt. Everest</p>
@@ -15,7 +15,7 @@ function Page1() {
                    </section>
                    <section>
                         <div>
-                            <div className="item">
+                            <div className="item item2">
                                 <h6>8.611m</h6>
                             </div>
                                 <p className='opis-itema'>K2</p>
@@ -23,7 +23,7 @@ function Page1() {
                    </section>
                    <section>
                         <div>
-                            <div className="item">
+                            <div className="item item3">
                                 <h6>8.536m</h6>
                             </div>
                                 <p className='opis-itema'>Kanchenjunga I</p>
@@ -31,13 +31,12 @@ function Page1() {
                    </section>
                    <section>
                         <div>
-                            <div className="item">
+                            <div className="item item4">
                                 <h6>8.511m</h6>
                             </div>
                                 <p className='opis-itema'>Lhotse I</p>
                         </div>
                    </section>
-                  
                 </div>
                 <div className="control">
                     <span className="arrow left">

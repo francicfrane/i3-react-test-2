@@ -15,17 +15,31 @@ body {
   overflow-x: hidden;
 }
 
-.item {
-  color: white;
-  border-radius: 50%;
-  background-color: rgba(216, 216, 216, 0.075);
-  width: 160px;
-  height: 160px;
-  position: relative;
-  margin: 0 auto;
+.item1 {
+  background-image: url(./items_img/item1.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
-.item h6 {
+.item2 {
+  background-image: url(./items_img/item2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item3 {
+  background-image: url(./items_img/item3.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.item4 {
+  background-image: url(./items_img/item4.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+h6 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,105 +47,181 @@ body {
           transform: translate(-50%, -50%);
   font-size: 28px;
   font-weight: 500;
-}
-
-.opis-itema {
-  color: #e2e2e2;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.container {
-  margin-top: 150px;
-  position: absolute;
-  width: 80%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.carousel {
-  height: 400px;
-  overflow: hidden;
-  position: relative;
+  background: rgba(0, 0, 0, 0.349);
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0);
+  color: #e2e2e2;
+  line-height: 25px;
 }
 
-.slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  width: 400%;
+@media all and (max-width: 549px) {
+  .item {
+    color: white;
+    border-radius: 50%;
+    background-color: rgba(216, 216, 216, 0.075);
+    width: 160px;
+    height: 160px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .opis-itema {
+    color: #e2e2e2;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .container {
+    margin-top: 200px;
+    position: fixed;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .carousel {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0);
+  }
+  .slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    width: 400%;
+  }
+  .slider section {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 20px;
+  }
+  .left, .right {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .arrow i {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    font-size: 70px;
+    color: rgba(0, 179, 84, 0.623);
+  }
+  .arrow i:hover {
+    color: #00b353;
+  }
+  .left {
+    left: 10px;
+  }
+  .right {
+    right: 10px;
+  }
+  .control ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+  .control ul li {
+    width: 10px;
+    height: 10px;
+    background: #333;
+    border: 1px solid #333;
+    border-radius: 50px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .control ul li.selected {
+    background: rgba(0, 179, 84, 0.623);
+  }
 }
 
-.slider section {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 20px;
+@media all and (min-width: 550px) {
+  .arrow, .selected {
+    display: none;
+  }
+  .slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .item {
+    color: white;
+    border-radius: 50%;
+    background-color: rgba(216, 216, 216, 0.075);
+    width: 120px;
+    height: 120px;
+    position: relative;
+    margin: 0 10px;
+  }
+  .item h6 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-weight: 500;
+  }
+  .opis-itema {
+    color: #e2e2e2;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 120%;
+  }
 }
 
-.left, .right {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  cursor: pointer;
+@media all and (min-width: 786px) {
+  .item {
+    margin: 0 15px;
+  }
 }
 
-.arrow i {
-  font-size: 70px;
-  color: rgba(0, 179, 84, 0.623);
+@media all and (min-width: 992px) {
+  .item {
+    margin: 0 25px;
+  }
 }
 
-.arrow i:hover {
-  color: #00b353;
-}
-
-.left {
-  left: 10px;
-}
-
-.right {
-  right: 10px;
-}
-
-.control ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin: 0;
-  padding: 0;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-}
-
-.control ul li {
-  width: 10px;
-  height: 10px;
-  background: #333;
-  border: 2px solid #333;
-  border-radius: 50px;
-  margin: 10px;
-  cursor: pointer;
-}
-
-.control ul li.selected {
-  background: transparent;
+@media all and (min-width: 1980px) {
+  .item {
+    width: 200px;
+    height: 200px;
+    margin: 0 45px;
+  }
+  .opis-itema {
+    font-size: 30px;
+  }
 }
 /*# sourceMappingURL=Page1.css.map */
